@@ -1,0 +1,4 @@
+https://www.sejuku.net/blog/82779
+FTPサーバ構築　11/25 screenshotsあり
+VirtualBox上にUbuntu 18.04 LTSを構築
+コマンドぽちぽちしなかった
