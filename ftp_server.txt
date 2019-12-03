@@ -1,3 +1,27 @@
+
+1対多のサービスなので上書きされないように
+sftpで送信する
+ログを吐く、どこでもいい
+ftp 構築
+
+Ubuntu
+Vaygrand で
+
+12345
+
+tfukuda
+password1
+
+まずphothn でhelloworld
+そのあとFTPサーバ　Vaygrand
+
+pyenv    pythonのバージョンを簡単に切り替えることができるようにしてくれるツール
+
+Brew入れたところまで
+会社の開発環境に近づけたい
+
+
+
 https://www.sejuku.net/blog/82779
 FTPサーバ構築　11/25 screenshotsあり
 VirtualBox上にUbuntu 18.04 LTSを構築
@@ -8,7 +32,11 @@ Vagrant+VirtualBoxでUbuntu環境構築
 https://qiita.com/w2-yamaguchi/items/191830191f8af05ac4ddbuntu
 
 /Users/tomoki/vagrant/ubunt_server
-
+ここでサーバー立てるコマンド
+vagrant up
+vagrant ssh
+または
+ssh vagrant@127.0.0.1 -p 2222 -i /Users/tomoki/vagrant/ubunt_server/.vagrant/machines/default/virtualbox/private_key
 
 log 
 
