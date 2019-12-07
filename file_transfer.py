@@ -2,7 +2,8 @@
 import paramiko
 import sys
 import logging
-logging.basicConfig(stream=sys.stderr, level=logging.DEBUG)
+import datetime
+logging.basicConfig(filename='log/file_transfer.log', level=logging.DEBUG)
 
 HOST = '127.0.0.1'
 PORT = 2222 # SFTPのポート
@@ -17,9 +18,12 @@ rsa_key = paramiko.RSAKey.from_private_key_file(KEY_FILE)
 
 args = sys.argv
 
-print("第1引数：" + args[1])
+current_time = datetime.datetime.today()
+print("現在時刻："+str(current_time))
+
+print("転送ファイル名：" + args[1])
 local_path = args[1]
-remote_path = "/home/vagrant/test/test.csv"
+remote_path = "/home/vagrant/"+current_time.strftime("%Y%m%d_%H%M%S")+"/"
 
 
 def main(local_file,remote_file):
@@ -28,119 +32,17 @@ def main(local_file,remote_file):
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         client.connect(HOST, PORT, USER, pkey=rsa_key) # キーを指定することでパスワードは必要なし
         sftp = client.open_sftp()
-        sftp.put(local_file,remote_file)
+        sftp.mkdir(remote_path)
+        sftp.put(local_file,remote_file+args[1])
+        print("転送完了")
 
     except Exception as e:
+        logging.error(e)
         print(e)
+        print("転送失敗")
 
     finally:
         sftp.close()
         client.close()
 
-
-
-# # Open a transport
-# transport = paramiko.Transport((host, port))
-
-# # Auth
-# password = "vagrant"
-# username = "19950317"
-# transport.connect(username = username, password = password)
-
-# # Go!
-
-# sftp = paramiko.SFTPClient.from_transport(transport)
-
-# # Download
-
-# # filepath = '/etc/passwd'
-# # localpath = '/home/remotepasswd'
-# # sftp.get(filepath, localpath)
-
-# # Upload
-
-# sftp.put(localpath, remote_path)
-
-# # Close
-
-# sftp.close()
-# transport.close()
-
-
-
-
-
-
-# import sys
-# import paramiko
-
-
-# args = sys.argv
-
-# print("第1引数：" + args[1])
-# local_path = args[1]
-# remote_path = "/home/vagrant/test"
-
-# HOST="127.0.0.1"
-# PORT=2222
-# USERNAME="vagrant"
-# PASSWORD="vagrant"
-
-# def make_path(remote_path):
-
-#     try:
-#         sftp.chdir(remote_path)  # Test if remote_path exists
-#     except IOError:
-#         sftp.mkdir(remote_path)  # Create remote_path
-#         sftp.chdir(remote_path)
-
- 
-# def main(local_path,remote_path):
-#     try:
-#         client=paramiko.SSHClient()
-#         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-#         client.connect(HOST,port=PORT,username=USERNAME,password=PASSWORD)
-#         sftp=client.open_sftp()
-#         print("trying now")
-
-#         # sftp = paramiko.SFTPClient.from_transport(transport)
-#         make_path(remote_path)
-#         sftp.put(local_path, '.')    # At this point, you are in remote_path in either case
- 
-#     except Exception as e:
-#         print(e)
-#         print("exception now")
- 
-#     finally:
-#         sftp.close()
-#         client.close()
-#         print("done")
-
 main(local_path,remote_path)
-
-
-# # import os.path
-
-# # def mkdir_p(sftp, remote_directory):
-# #     """Change to this directory, recursively making new folders if needed.
-# #     Returns True if any folders were created."""
-# #     if remote_directory == '/':
-# #         # absolute path so change directory to root
-# #         sftp.chdir('/')
-# #         return
-# #     if remote_directory == '':
-# #         # top-level relative directory must exist
-# #         return
-# #     try:
-# #         sftp.chdir(remote_directory) # sub-directory exists
-# #     except IOError:
-# #         dirname, basename = os.path.split(remote_directory.rstrip('/'))
-# #         mkdir_p(sftp, dirname) # make parent directories
-# #         sftp.mkdir(basename) # sub-directory missing, so created it
-# #         sftp.chdir(basename)
-# #         return True
-
-# # sftp = paramiko.SFTPClient.from_transport(transport)
-# # mkdir_p(sftp, remote_path) 
-# # sftp.put(local_path, '.')    # At this point, you are in remote_path
-# # sftp.close()
