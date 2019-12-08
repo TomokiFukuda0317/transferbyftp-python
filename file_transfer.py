@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 import paramiko
 import sys
 import logging
@@ -23,10 +23,13 @@ print("現在時刻："+str(current_time))
 
 print("転送ファイル名：" + args[1])
 local_path = args[1]
-remote_path = "/home/vagrant/"+current_time.strftime("%Y%m%d_%H%M%S")+"/"
+remote_path = "/home/vagrant/files/"+current_time.strftime("%Y%m%d_%H%M%S")+"/"
 
 
 def main(local_file,remote_file):
+    """
+    SFTPでファイル転送
+    """
     try:
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -45,4 +48,5 @@ def main(local_file,remote_file):
         sftp.close()
         client.close()
 
-main(local_path,remote_path)
+if __name__ == "__main__":
+    main(local_path,remote_path)

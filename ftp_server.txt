@@ -36,7 +36,7 @@ https://qiita.com/w2-yamaguchi/items/191830191f8af05ac4ddbuntu
 vagrant up
 vagrant ssh
 または
-ssh vagrant@127.0.0.1 -p 2222 -i /Users/tomoki/vagrant/ubunt_server/.vagrant/machines/default/virtualbox/private_key
+ssh vagrant@127.0.0.1 -P 2222 -i /Users/tomoki/vagrant/ubunt_server/.vagrant/machines/default/virtualbox/private_key
 
 log 
 
@@ -279,3 +279,165 @@ Connection to 127.0.0.1 closed.
 tomoki-3:ubunt_server tomoki$ pwd
 /Users/tomoki/vagrant/ubunt_server
 tomoki-3:ubunt_server tomoki$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ごみ↓
+サーバ上にpythonをインストール
+
+vagrant@ubuntu-bionic:~$ sudo apt update
+Get:1 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+Hit:2 http://archive.ubuntu.com/ubuntu bionic InRelease
+Get:3 http://archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+Get:4 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [593 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic/universe amd64 Packages [8570 kB]
+Get:7 http://security.ubuntu.com/ubuntu bionic-security/main Translation-en [194 kB]
+Get:8 http://security.ubuntu.com/ubuntu bionic-security/restricted amd64 Packages [15.1 kB]
+Get:9 http://security.ubuntu.com/ubuntu bionic-security/restricted Translation-en [4684 B]
+Get:10 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [626 kB]
+Get:11 http://security.ubuntu.com/ubuntu bionic-security/universe Translation-en [209 kB]
+Get:12 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [6116 B]
+Get:13 http://security.ubuntu.com/ubuntu bionic-security/multiverse Translation-en [2600 B]
+Get:14 http://archive.ubuntu.com/ubuntu bionic/universe Translation-en [4941 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic/multiverse amd64 Packages [151 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic/multiverse Translation-en [108 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [816 kB]
+Get:18 http://archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [287 kB]
+Get:19 http://archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [24.1 kB]
+Get:20 http://archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [6620 B]
+Get:21 http://archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [1032 kB]
+Get:22 http://archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [319 kB]
+Get:23 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [9308 B]
+Get:24 http://archive.ubuntu.com/ubuntu bionic-updates/multiverse Translation-en [4508 B]
+Get:25 http://archive.ubuntu.com/ubuntu bionic-backports/main amd64 Packages [2512 B]
+Get:26 http://archive.ubuntu.com/ubuntu bionic-backports/main Translation-en [1644 B]
+Get:27 http://archive.ubuntu.com/ubuntu bionic-backports/universe amd64 Packages [4028 B]
+Get:28 http://archive.ubuntu.com/ubuntu bionic-backports/universe Translation-en [1856 B]
+Fetched 18.2 MB in 14s (1325 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+24 packages can be upgraded. Run 'apt list --upgradable' to see them.
+vagrant@ubuntu-bionic:~$ sudo apt upgrade
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+The following NEW packages will be installed:
+  linux-headers-4.15.0-72 linux-headers-4.15.0-72-generic
+  linux-image-4.15.0-72-generic linux-modules-4.15.0-72-generic
+The following packages will be upgraded:
+  grub-common grub-pc grub-pc-bin grub2-common libnss-systemd libpam-systemd
+  libpython3.6 libpython3.6-minimal libpython3.6-stdlib libsqlite3-0
+  libsystemd0 libudev1 linux-headers-generic linux-headers-virtual
+  linux-image-virtual linux-virtual python3.6 python3.6-minimal snapd systemd
+  systemd-sysv udev unattended-upgrades virtualbox-guest-utils
+24 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 61.0 MB of archives.
+After this operation, 164 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss-systemd amd64 237-3ubuntu10.33 [106 kB]
+Get:2 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsystemd0 amd64 237-3ubuntu10.33 [205 kB]
+Get:3 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpam-systemd amd64 237-3ubuntu10.33 [108 kB]
+Get:4 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 systemd amd64 237-3ubuntu10.33 [2905 kB]
+Get:5 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 udev amd64 237-3ubuntu10.33 [1102 kB]
+Get:6 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libudev1 amd64 237-3ubuntu10.33 [54.6 kB]
+Get:7 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 systemd-sysv amd64 237-3ubuntu10.33 [12.5 kB]
+Get:8 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython3.6 amd64 3.6.9-1~18.04 [1414 kB]
+Get:9 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3.6 amd64 3.6.9-1~18.04 [203 kB]
+Get:10 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython3.6-stdlib amd64 3.6.9-1~18.04 [1709 kB]
+Get:11 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3.6-minimal amd64 3.6.9-1~18.04 [1610 kB]
+Get:12 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython3.6-minimal amd64 3.6.9-1~18.04 [533 kB]
+Get:13 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 libsqlite3-0 amd64 3.22.0-1ubuntu0.2 [498 kB]
+Get:14 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 grub-pc amd64 2.02-2ubuntu8.14 [138 kB]
+Get:15 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 grub2-common amd64 2.02-2ubuntu8.14 [532 kB]
+Get:16 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 grub-pc-bin amd64 2.02-2ubuntu8.14 [899 kB]
+Get:17 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 grub-common amd64 2.02-2ubuntu8.14 [1772 kB]
+Get:18 http://archive.ubuntu.com/ubuntu bionic-updates/main amd64 linux-headers-/etc/kernel/postinst.d/x-grub-legacy-ec2:
+Searching for GRUB installation directory ... found: /boot/grub
+Searching for default file ... found: /boot/grub/default
+Testing for an existing GRUB menu.lst file ... found: /boot/grub/menu.lst
+Searching for splash image ... none found, skipping ...
+Found kernel: /boot/vmlinuz-4.15.0-70-generic
+Found kernel: /boot/vmlinuz-4.15.0-72-generic
+Found kernel: /boot/vmlinuz-4.15.0-70-generic
+Replacing config file /run/grub/menu.lst with new version
+Updating /boot/grub/menu.lst ... done
+
+/etc/kernel/postinst.d/zz-update-grub:
+Sourcing file `/etc/default/grub'
+Sourcing file `/etc/default/grub.d/50-cloudimg-settings.cfg'
+Generating grub configuration file ...
+Found linux image: /boot/vmlinuz-4.15.0-72-generic
+Found initrd image: /boot/initrd.img-4.15.0-72-generic
+Found linux image: /boot/vmlinuz-4.15.0-70-generic
+Found initrd image: /boot/initrd.img-4.15.0-70-generic
+done
+Processing triggers for initramfs-tools (0.130ubuntu3.9) ...
+update-initramfs: Generating /boot/initrd.img-4.15.0-72-generic
+
+vagrant@ubuntu-bionic:~$ sudo apt search python3.7-*
+Sorting... Done
+Full Text Search... Done
+idle-python3.7/bionic-updates 3.7.5-2~18.04 all
+  IDE for Python (v3.7) using Tkinter
+
+libpython3.7/bionic-updates 3.7.5-2~18.04 amd64
+  Shared Python runtime library (version 3.7)
+
+libpython3.7-dbg/bionic-updates 3.7.5-2~18.04 amd64
+  Debug Build of the Python Interpreter (version 3.7)
+
+libpython3.7-dev/bionic-updates 3.7.5-2~18.04 amd64
+  Header files and a static library for Python (v3.7)
+
+libpython3.7-minimal/bionic-updates 3.7.5-2~18.04 amd64
+  Minimal subset of the Python language (version 3.7)
+
+libpython3.7-stdlib/bionic-updates 3.7.5-2~18.04 amd64
+  Interactive high-level object-oriented language (standard library, version 3.7)
+
+libpython3.7-testsuite/bionic-updates 3.7.5-2~18.04 all
+  Testsuite for the Python standard library (v3.7)
+
+python3.7/bionic-updates 3.7.5-2~18.04 amd64
+  Interactive high-level object-oriented language (version 3.7)
+
+python3.7-dbg/bionic-updates 3.7.5-2~18.04 amd64
+  Debug Build of the Python Interpreter (version 3.7)
+
+python3.7-dev/bionic-updates 3.7.5-2~18.04 amd64
+  Header files and a static library for Python (v3.7)
+
+python3.7-doc/bionic-updates 3.7.5-2~18.04 all
+  Documentation for the high-level object-oriented language Python (v3.7)
+
+python3.7-examples/bionic-updates 3.7.5-2~18.04 all
+  Examples for the Python language (v3.7)
+
+python3.7-minimal/bionic-updates 3.7.5-2~18.04 amd64
+  Minimal subset of the Python language (version 3.7)
+
+python3.7-venv/bionic-updates 3.7.5-2~18.04 amd64
+  Interactive high-level object-oriented language (pyvenv binary, version 3.7)
