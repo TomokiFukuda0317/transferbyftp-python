@@ -9,11 +9,12 @@ HOST = '127.0.0.1'
 PORT = 2222 # SFTPのポート
 USER = 'vagrant'
 KEY_FILE = '/Users/tomoki/vagrant/ubunt_server/.vagrant/machines/default/virtualbox/private_key' # 秘密鍵ファイル
-# PASSPHRASE = 'passphrase'
- 
+
 # 秘密鍵ファイルからキーを取得
 rsa_key = paramiko.RSAKey.from_private_key_file(KEY_FILE)
+
 # 秘密鍵ファイルにパスフレーズを設定している場合は下記
+# PASSPHRASE = 'passphrase'
 # rsa_key = paramiko.RSAKey.from_private_key_file(KEY_FILE, PASSPHRASE)
 
 args = sys.argv
