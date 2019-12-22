@@ -13,6 +13,7 @@ from watchdog.observers import Observer
 from watchdog.events import PatternMatchingEventHandler
 
 
+
 class MyHandler(PatternMatchingEventHandler):
     def __init__(self, patterns):
         super(MyHandler, self).__init__(patterns=patterns)
@@ -22,8 +23,17 @@ class MyHandler(PatternMatchingEventHandler):
         print("ファイルに更新がありました。")
 
     def on_created(self, event):
+        # filepath = event.src_path
+        # filename = os.path.basename(filepath)
+        # print(filepath)
+        # if zipfile.is_zipfile(filepath):
+        #     with zipfile.ZipFile(filename,'r') as zf:
+        #         zf.extractall(target_dir)
+        #     print('Zipファイルを解凍しました')
+        # else:
+        #     print('%sができました' % filename)
+        
         self._run_command()
-
 
 # ファイル監視の開始
 def watch(target_dir, extension):

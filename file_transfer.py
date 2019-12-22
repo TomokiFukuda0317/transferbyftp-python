@@ -6,10 +6,11 @@ import logging
 import datetime
 logging.basicConfig(filename='log/file_transfer.log', level=logging.DEBUG)
 
-HOST = '127.0.0.1'
-PORT = 2222 # SFTPのポート
-USER = 'vagrant'
-KEY_FILE = '/Users/tomoki/vagrant/ubunt_server/.vagrant/machines/default/virtualbox/private_key' # 秘密鍵ファイル
+HOST = '153.126.154.31'
+PORT = 22 # SFTPのポート
+USER = 'ubuntu'
+KEY_FILE = '/Users/tomoki/.ssh/id_rsa_ftp'
+# KEY_FILE = '/Users/tomoki/vagrant/ubunt_server/.vagrant/machines/default/virtualbox/private_key' # 秘密鍵ファイル
 
 # 秘密鍵ファイルからキーを取得
 rsa_key = paramiko.RSAKey.from_private_key_file(KEY_FILE)
@@ -20,24 +21,24 @@ rsa_key = paramiko.RSAKey.from_private_key_file(KEY_FILE)
 
 args = sys.argv
 
-current_time = datetime.datetime.today()
-print("現在時刻："+str(current_time))
+current_time = datetime.datetime.today().strftime("%Y%m%d_%H%M%S")
+print("現在時刻："+current_time)
 print("転送ファイル名：" + args[1])
 #os.chdir('/Users/tomoki/dev2')
-zip_f_name = str(args[1])+".zip"
+zip_file = "file.zip"
 
 # 圧縮するファイルのディレクトリへ移動
 #os.chdir('C:\\user1\\data')
 
 # ZIPファイルを作成/ZIPファイルに追加
-with zipfile.ZipFile(zip_f_name,'w') as zip_f:
-    zip_f.write(args[1], compress_type=zipfile.ZIP_DEFLATED)
+with zipfile.ZipFile(zip_file,'w') as tmp:
+    tmp.write(args[1], compress_type=zipfile.ZIP_DEFLATED)
 
 
-print(zip_f_name)
+print(zip_file)
 
-local_path = zip_f_name
-remote_path = "/home/vagrant/files/"+current_time.strftime("%Y%m%d_%H%M%S")+"/"
+local_path = zip_file
+remote_path = "/home/ubuntu/files/"+current_time
 
 
 def main(local_file,remote_file):
@@ -50,7 +51,7 @@ def main(local_file,remote_file):
         client.connect(HOST, PORT, USER, pkey=rsa_key) # キーを指定することでパスワードは必要なし
         sftp = client.open_sftp()
         sftp.mkdir(remote_path)
-        sftp.put(local_file,remote_file+zip_f_name)
+        sftp.put(local_file,remote_file+"/"+zip_file)
         print("転送完了")
 
     except Exception as e:
