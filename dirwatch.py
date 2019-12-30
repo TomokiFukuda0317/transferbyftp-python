@@ -27,6 +27,7 @@ class MyHandler(PatternMatchingEventHandler):
         # filename = os.path.basename(filepath)
         # print(filepath)
         # if zipfile.is_zipfile(filepath):
+        # 解凍
         #     with zipfile.ZipFile(filename,'r') as zf:
         #         zf.extractall(target_dir)
         #     print('Zipファイルを解凍しました')
@@ -54,4 +55,4 @@ if __name__ == "__main__":
     if 2 > len(sys.argv):
         print("監視対象のディレクトリを第１引数に設定してください")
     else:
-        watch(sys.argv[1], ["*csv"])
+        watch(sys.argv[1], ["*zip"])
