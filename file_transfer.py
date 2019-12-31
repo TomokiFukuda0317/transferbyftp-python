@@ -32,7 +32,7 @@ print("現在時刻："+current_time)
 print("対象ファイル名：" + args[1])
 tmp = str(random.random())
 
-# 対N通信を想定し、ファイル名が被らないよう日付+乱数でユニークにする
+# 対N通信を想定し、同時送信対策とファイル名が被らないよう日付+乱数でユニークにする
 file_name = "file"+current_time+"-"+tmp
 zip_file = file_name+".zip"
 
@@ -46,7 +46,7 @@ print("対象ファイルをzip化してFTPサーバへ転送します："+zip_f
 
 local_path = zip_file
 # 転送先サーバ側のディレクトリを設定
-remote_path = "/home/ubuntu/files/"+current_time
+remote_path = "/home/ubuntu/files/archive/."
 
 def main(local_file,remote_file):
     """
@@ -57,7 +57,6 @@ def main(local_file,remote_file):
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         client.connect(HOST, PORT, USER, pkey=rsa_key) 
         sftp = client.open_sftp()
-        sftp.mkdir(remote_path)
         sftp.put(local_file,remote_file+"/"+zip_file)
         print("転送完了しました")
 
