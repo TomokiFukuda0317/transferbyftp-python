@@ -11,12 +11,12 @@ N対1の複数通信に対応したクライアント/サーバ FTPプログラ�
 ## Requirements
 
 - サーバ
- - Ubuntu 16.04 more
- - Python 3.7.0 more
+    - Ubuntu 16.04 more
+    - Python 3.7.0 more
 
 - クライアント
- - Any platform
- - Python 3.7.0 more
+    - Any platform
+    - Python 3.7.0 more
 
 ## Usage
 
