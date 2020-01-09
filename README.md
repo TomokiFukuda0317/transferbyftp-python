@@ -1,13 +1,41 @@
-# work_fukuda
-ftpサーバ構築
+# Transferbyftp python
 
-クライアント側
-clientPCからUbuntサーバへftp/pythonを使ったデータ転送
-1対N通信を想定し、同時送信対策とファイル名が被らないよう日付+乱数でユニークにする
+N対1の複数通信に対応したクライアント/サーバ FTPプログラム。
 
+## Features
 
-サーバ側
-ファイル受信をトリガーに処理を実行する無料の機能がなかったので、今回はwatchdogでファイル監視（cronでも良い）
+- 配信対象ファイルのZIP圧縮
+- FTP/SFTPによるサーバ転送
+- ファイル受信トリガープログラム
 
+## Requirements
 
+- サーバ
+ - Ubuntu 16.04 more
+ - Python 3.7.0 more
 
+- クライアント
+ - Any platform
+ - Python 3.7.0 more
+
+## Usage
+
+- サーバ
+
+ファイル受信監視
+
+```
+$ python dirwatch.py DIRECTORY_PATH
+```
+
+- クライアント
+
+ZIP圧縮 + ファイル転送
+
+```
+$ python file_transfer.py FILE_NAME
+```
+
+## License
+
+MIT
