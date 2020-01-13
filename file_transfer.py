@@ -90,7 +90,7 @@ def button1_clicked():
 # button2(start)クリック時の処理
 def button2_clicked(parser):
     if file1.get():
-        messagebox.showinfo('以下の対象ファイルをサーバへ転送しました。', u'対象ファイル↓↓\n' + file1.get())
+        messagebox.showinfo('転送完了', u'以下の対象ファイルをサーバへ転送しました。\n' + file1.get())
         parser.add_argument('-local_path', default=file1.get())
         argparse_args = parser.parse_args()
         file_transfer(argparse_args)
