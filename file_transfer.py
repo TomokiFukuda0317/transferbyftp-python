@@ -63,7 +63,6 @@ def file_transfer(argparse_args):
     try:
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        logging.info(f"OKKOKOKOKO")
         client.connect(host, port, user, pkey=rsa_key)
         sftp = client.open_sftp()
         sftp.put(zip_file, remote_path + "/" + zip_file)
