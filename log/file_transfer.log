@@ -443,3 +443,453 @@ DEBUG:paramiko.transport.sftp:[chan 0] stat(b'/home/ubuntu/files/archive/./file2
 INFO:paramiko.transport.sftp:[chan 0] sftp session closed.
 DEBUG:paramiko.transport:[chan 0] EOF sent (0)
 DEBUG:paramiko.transport:EOF in transport thread
+INFO:root:現在時刻: 20200113-142041
+INFO:root:配信対象ファイル: None
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+ERROR:root:local_pathとremote_pathを設定してください
+INFO:root:現在時刻: 20200113-142230
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:現在時刻: 20200113-142255
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive/.
+INFO:root:現在時刻: 20200113-142458
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:現在時刻: 20200113-142534
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:現在時刻: 20200113-142711
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:現在時刻: 20200113-142816
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:現在時刻: 20200113-142828
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:現在時刻: 20200113-143119
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:現在時刻: 20200113-144439
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-144439-6718.zip
+INFO:root:現在時刻: 20200113-144510
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-144510-6718.zip
+ERROR:root:転送失敗!!: [Errno 60] Operation timed out
+INFO:root:現在時刻: 20200113-144727
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-144727-6718.zip
+ERROR:root:転送失敗!!: [Errno 51] Network is unreachable
+DEBUG:paramiko.transport:starting thread (client mode): 0x6b7e7d0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+INFO:paramiko.transport.sftp:[chan 0] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/./file20200113-145120-0.2536614998617922.zip', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/./file20200113-145120-0.2536614998617922.zip', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 0] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 0] stat(b'/home/ubuntu/files/archive/./file20200113-145120-0.2536614998617922.zip')
+INFO:paramiko.transport.sftp:[chan 0] sftp session closed.
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+INFO:root:現在時刻: 20200113-145131
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-145131-6718.zip
+ERROR:root:転送失敗!!: [Errno 51] Network is unreachable
+INFO:root:現在時刻: 20200113-145306
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-145306-6718.zip
+DEBUG:paramiko.transport:starting thread (client mode): 0x4eed1d0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+INFO:root:現在時刻: 20200113-145404
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-145404-6718.zip
+DEBUG:paramiko.transport:starting thread (client mode): 0x9731150
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+INFO:root:現在時刻: 20200113-145422
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-145422-6718.zip
+DEBUG:paramiko.transport:starting thread (client mode): 0x40552d0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+INFO:root:現在時刻: 20200113-145800
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-145800-6718.zip
+DEBUG:paramiko.transport:starting thread (client mode): 0x647c190
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+DEBUG:paramiko.transport:starting thread (client mode): 0xb8b4750
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+INFO:paramiko.transport.sftp:[chan 0] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/./file20200113-145842-0.7132273164811012.zip', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/./file20200113-145842-0.7132273164811012.zip', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 0] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 0] stat(b'/home/ubuntu/files/archive/./file20200113-145842-0.7132273164811012.zip')
+INFO:paramiko.transport.sftp:[chan 0] sftp session closed.
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:starting thread (client mode): 0x3c4c850
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+INFO:paramiko.transport.sftp:[chan 0] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/./file20200113-150452-0.09515384660015191.zip', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/./file20200113-150452-0.09515384660015191.zip', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 0] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 0] stat(b'/home/ubuntu/files/archive/./file20200113-150452-0.09515384660015191.zip')
+INFO:paramiko.transport.sftp:[chan 0] sftp session closed.
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+INFO:root:現在時刻: 20200113-150457
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-150457-6718.zip
+DEBUG:paramiko.transport:starting thread (client mode): 0x9a40210
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+INFO:root:現在時刻: 20200113-150702
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-150702-6718.zip
+DEBUG:paramiko.transport:starting thread (client mode): 0x4f14250
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+INFO:root:現在時刻: 20200113-150736
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-150736-6718.zip
+DEBUG:paramiko.transport:starting thread (client mode): 0x2a16190
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+INFO:root:現在時刻: 20200113-150922
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:test: /Users/tomoki/.ssh/id_rsa_ftp
+INFO:root:配信先ZIPファイル: file20200113-150922-6718.zip
+DEBUG:paramiko.transport:starting thread (client mode): 0xac79110
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+INFO:root:現在時刻: 20200113-150949
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:test:    ssh-rsa       
+׳<HY5.[ 8~ ;:>k-y7i# a$h!`C4k7jAG84;	=t(Z+{.Pi'/
+M	Foa)	Tt[;uފ[2jx{]OKq@5Ǒ
+#}^aZžvhN5,d=NL	h0{%~ޫ2BHpEYʆN`0KAj'vW/
+INFO:root:配信先ZIPファイル: file20200113-150949-6718.zip
+DEBUG:paramiko.transport:starting thread (client mode): 0x9601c50
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+INFO:root:現在時刻: 20200113-151014
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:test:    ssh-rsa       
+׳<HY5.[ 8~ ;:>k-y7i# a$h!`C4k7jAG84;	=t(Z+{.Pi'/
+M	Foa)	Tt[;uފ[2jx{]OKq@5Ǒ
+#}^aZžvhN5,d=NL	h0{%~ޫ2BHpEYʆN`0KAj'vW/
+INFO:root:配信先ZIPファイル: file20200113-151014-6718.zip
+ERROR:root:転送失敗!!: [Errno None] Unable to connect to port 22 on 153.126.154.31
+INFO:root:現在時刻: 20200113-151135
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-151135-6718.zip
+INFO:root:OKKOKOKOKO
+ERROR:root:転送失敗!!: [Errno None] Unable to connect to port 22 on 153.126.154.31
+INFO:root:現在時刻: 20200113-151152
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-151152-6718.zip
+ERROR:root:転送失敗!!: [Errno None] Unable to connect to port 22 on 153.126.154.31
+ERROR:root:[Errno None] Unable to connect to port 22 on 153.126.154.31
+ERROR:root:[Errno None] Unable to connect to port 22 on 153.126.154.31
+INFO:root:現在時刻: 20200113-151458
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive/.
+INFO:root:配信先ZIPファイル: file20200113-151458-6718.zip
+INFO:root:OKKOKOKOKO
+ERROR:root:転送失敗!!: [Errno None] Unable to connect to port 22 on 153.126.154.31
+ERROR:root:[Errno None] Unable to connect to port 22 on 153.126.154.31
+INFO:root:現在時刻: 20200113-151615
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-151615-6718.zip
+INFO:root:OKKOKOKOKO
+ERROR:root:転送失敗!!: [Errno None] Unable to connect to port 22 on 153.126.154.31
+INFO:root:現在時刻: 20200113-152817
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-152817-6718.zip
+INFO:root:OKKOKOKOKO
+DEBUG:paramiko.transport:starting thread (client mode): 0x58ba050
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) failed.
+ERROR:root:転送失敗!!: Authentication failed.
+DEBUG:paramiko.transport:starting thread (client mode): 0x78467d0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+INFO:paramiko.transport.sftp:[chan 0] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/./file20200113-152839-0.14739728131073893.zip', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/./file20200113-152839-0.14739728131073893.zip', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 0] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 0] stat(b'/home/ubuntu/files/archive/./file20200113-152839-0.14739728131073893.zip')
+INFO:paramiko.transport.sftp:[chan 0] sftp session closed.
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+INFO:root:現在時刻: 20200113-153104
+INFO:root:配信対象ファイル: test.csv
+INFO:root:配信先PATH: /home/ubuntu/files/archive
+INFO:root:配信先ZIPファイル: file20200113-153104-6718.zip
+INFO:root:OKKOKOKOKO
+DEBUG:paramiko.transport:starting thread (client mode): 0x8eba150
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.7.1
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+INFO:paramiko.transport:Connected (version 2.0, client OpenSSH_7.2p2)
+DEBUG:paramiko.transport:kex algos:['curve25519-sha256@libssh.org', 'ecdh-sha2-nistp256', 'ecdh-sha2-nistp384', 'ecdh-sha2-nistp521', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group14-sha1'] server key:['ssh-rsa', 'rsa-sha2-512', 'rsa-sha2-256', 'ecdsa-sha2-nistp256', 'ssh-ed25519'] client encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] server encrypt:['chacha20-poly1305@openssh.com', 'aes128-ctr', 'aes192-ctr', 'aes256-ctr', 'aes128-gcm@openssh.com', 'aes256-gcm@openssh.com'] client mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] server mac:['umac-64-etm@openssh.com', 'umac-128-etm@openssh.com', 'hmac-sha2-256-etm@openssh.com', 'hmac-sha2-512-etm@openssh.com', 'hmac-sha1-etm@openssh.com', 'umac-64@openssh.com', 'umac-128@openssh.com', 'hmac-sha2-256', 'hmac-sha2-512', 'hmac-sha1'] client compress:['none', 'zlib@openssh.com'] server compress:['none', 'zlib@openssh.com'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: curve25519-sha256@libssh.org
+DEBUG:paramiko.transport:HostKey agreed: ssh-ed25519
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ssh-ed25519 host key for 153.126.154.31: b'0c8215fdfdf1b0f152f6263186b9f620'
+DEBUG:paramiko.transport:Trying SSH key b'f117be81903b107e9118a1c3d5dd7d8e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (publickey) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:Received global request "hostkeys-00@openssh.com"
+DEBUG:paramiko.transport:Rejecting "hostkeys-00@openssh.com" global request from server.
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+INFO:paramiko.transport.sftp:[chan 0] Opened sftp connection (server version 3)
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/file20200113-153104-6718.zip', 'wb')
+DEBUG:paramiko.transport.sftp:[chan 0] open(b'/home/ubuntu/files/archive/file20200113-153104-6718.zip', 'wb') -> 00000000
+DEBUG:paramiko.transport.sftp:[chan 0] close(00000000)
+DEBUG:paramiko.transport.sftp:[chan 0] stat(b'/home/ubuntu/files/archive/file20200113-153104-6718.zip')
+INFO:root:転送完了しました: file20200113-153104-6718.zip
+INFO:paramiko.transport.sftp:[chan 0] sftp session closed.
+DEBUG:paramiko.transport:[chan 0] EOF sent (0)
+DEBUG:paramiko.transport:EOF in transport thread
