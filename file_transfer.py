@@ -48,7 +48,8 @@ def file_transfer(argparse_args):
     zip_file = file_name + ".zip"
 
     # 解凍後のファイル名
-    unzip_file_name = local_path.strip(".csv") + "_" + file_name + ".csv"
+    file_name_without_ext = os.path.splitext(os.path.basename(local_path))[0]
+    unzip_file_name = file_name_without_ext + "_" + file_name + ".csv"
 
     # ZIPファイルを作成/ZIPファイルに追加
     with zipfile.ZipFile(zip_file, 'w', zipfile.ZIP_DEFLATED) as f:
