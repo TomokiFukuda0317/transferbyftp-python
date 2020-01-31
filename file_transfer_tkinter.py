@@ -21,14 +21,13 @@ def button2_clicked(parser):
     if file1.get():
         parser.add_argument('-local_path', default=file1.get())
         argparse_args = parser.parse_args()
-        try:
-            file_transfer.file_transfer(argparse_args)
+        #ファイル転送
+        result_flag = file_transfer.file_transfer(argparse_args)
+        if result_flag:
             messagebox.showinfo('転送完了', '対象ファイルをサーバへ転送しました。\n対象ファイル：' + file1.get())
+        else:
+            messagebox.showinfo('転送失敗','転送に失敗しました。\n選択したファイルが正しいか確認してください。')
 
-        except Exception as e:
-            logging.error(f"ERROR!!: {e}")
-            messagebox.showinfo('転送失敗','転送に失敗しました。\n選択したファイルが正しいか確認してください')
-         
     else:
         messagebox.showinfo('ファイル未選択','ファイルを選択してください。')
 
@@ -46,7 +45,6 @@ def tkinter_start(parser):
     button1 = ttk.Button(root, text=u'参照', command=button1_clicked)
     button1.grid(row=0, column=3)
 
-    # ラベルの作成
     # 「ファイル」ラベルの作成
     s = StringVar()
     s.set('対象ファイル>>')

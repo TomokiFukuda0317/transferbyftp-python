@@ -16,14 +16,16 @@ def get_random_number_str(random_size: int = 1) -> str:
         random_num_str += str(int(random.uniform(0, 9)))
     return random_num_str
 
-
-def file_transfer(argparse_args):
+def file_transfer(argparse_args:"ArgumentParser オブジェクト") ->"送信したzipファイル名":
     local_path = argparse_args.local_path
     remote_path = argparse_args.remote_path
     user = argparse_args.u
     host = argparse_args.I
     port = argparse_args.P
     rsa_key_file = argparse_args.i
+    
+    # 秘密鍵ファイルからキーを取得
+    rsa_key = paramiko.RSAKey.from_private_key_file(rsa_key_file)
 
     current_time = datetime.datetime.today().strftime("%Y%m%d-%H%M%S")
     logging.info(f"現在時刻: {current_time}")
@@ -33,44 +35,41 @@ def file_transfer(argparse_args):
     random_number_str = get_random_number_str(4)
 
     if local_path is None or remote_path is None:
-        logging.error("local_pathとremote_pathを設定してください")
+        logging.error("local_pathとremote_pathを設定してください。")
+        print("local_pathとremote_pathを設定してください。")
         return
 
-    # 秘密鍵ファイルからキーを取得
-    rsa_key = paramiko.RSAKey.from_private_key_file(rsa_key_file)
-
-    # 秘密鍵ファイルにパスフレーズを設定している場合は下記
-    # PASSPHRASE = 'passphrase'
-    # rsa_key = paramiko.RSAKey.from_private_key_file(KEY_FILE, PASSPHRASE)
-
-    # 対N通信を想定し、同時送信対策とファイル名が被らないよう日付+乱数でユニークにする
-    file_name = "file" + current_time + "-" + random_number_str
+    # ファイル名を作成、対N通信を想定し同時送信対策とファイル名が被らないよう日付+乱数でユニークにする
+    unique_suffix = "file" + current_time + "-" + random_number_str
+    file_name = os.path.splitext(os.path.basename(local_path))[0] + "_" + unique_suffix
     zip_file = file_name + ".zip"
-
-    # 解凍後のファイル名
-    file_name_without_ext = os.path.splitext(os.path.basename(local_path))[0]
-    unzip_file_name = file_name_without_ext + "_" + file_name + ".csv"
-
-    # ZIPファイルを作成/ZIPファイルに追加
-    with zipfile.ZipFile(zip_file, 'w', zipfile.ZIP_DEFLATED) as f:
-        f.write(local_path, unzip_file_name)
-    logging.info(f"配信先ZIPファイル: {zip_file}")
+    csv_file = file_name + ".csv"
 
     try:
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         client.connect(host, port, user, pkey=rsa_key)
         sftp = client.open_sftp()
+
+        # ZIPファイルを作成/ZIPファイルに追加
+        with zipfile.ZipFile(zip_file, 'w', zipfile.ZIP_DEFLATED) as f:
+            f.write(local_path, csv_file)
+        logging.info(f"配信先ZIPファイル: {zip_file}")
         sftp.put(zip_file, remote_path + "/" + zip_file)
         logging.info(f"転送完了しました: {zip_file}")
+        result_flag = True
 
     except Exception as e:
         logging.error(f"転送失敗!!: {e}")
+        print("転送に失敗しました。\n選択したファイルが正しいか確認してください。")
+        result_flag = False
 
     finally:
-        os.remove(zip_file)
         sftp.close()
         client.close()
+        #ファイル転送後、ローカルのzipファイル削除
+        os.remove(zip_file)
+    return result_flag
 
 
 if __name__ == "__main__":
@@ -82,4 +81,5 @@ if __name__ == "__main__":
     parser.add_argument('-P', default=22)
     parser.add_argument('-i', default='/Users/tomoki/.ssh/id_rsa_ftp')
     argparse_args = parser.parse_args()
+    #ファイル転送
     file_transfer(argparse_args)
