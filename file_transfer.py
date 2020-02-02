@@ -16,7 +16,7 @@ def get_random_number_str(random_size: int = 1) -> str:
         random_num_str += str(int(random.uniform(0, 9)))
     return random_num_str
 
-def file_transfer(argparse_args:"ArgumentParser オブジェクト") ->"送信したzipファイル名":
+def file_transfer(argparse_args:"ArgumentParser オブジェクト") ->"実行結果":
     local_path = argparse_args.local_path
     remote_path = argparse_args.remote_path
     user = argparse_args.u
