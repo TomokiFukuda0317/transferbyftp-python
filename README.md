@@ -13,12 +13,12 @@ Python: 3.7.4
 
 ## Usage
 ```
-python file_transfer.py　-local_path ${対象のcsvファイルのパス} -remote_path ${転送先のパス} -u ${ホスト名} -I ${ユーザ名}　-P ${ポート番号} -i ${公開鍵}
+python file_transfer.py -local_path ${対象のcsvファイルのパス} -remote_path ${転送先のパス} -u ${ユーザ名} -I ${ホスト名またはIPアドレス} -P ${ポート番号} -i ${公開鍵}
 ```
 （"-local_path  ${対象のcsvファイルのパス}"は必須。それ以外のパラメータは任意のdefault値をソース内に設定できる。（78-82行目））
 
 ```
-python ：file_transfer_tkinter.py -remote_path ${転送先のパス} -u ${ホスト名} -I ${ユーザ名}　-P ${ポート番号} -i ${公開鍵}
+python ：file_transfer_tkinter.py -remote_path ${転送先のパス} -u ${ユーザ名} -I ${ホスト名またはIPアドレス} -P ${ポート番号} -i ${公開鍵}
 ```
 （"-local_path  ${対象のcsvファイルのパス}"はプログラム実行時に出てくるGUIよりファイルを選択。それ以外のパラメータは任意のdefault値をソース内に設定できる。（76-80行目）
 
