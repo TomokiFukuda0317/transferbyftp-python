@@ -1,5 +1,5 @@
 import argparse
-import paramiko
+import paramiko #sftp をpip list に出す　danjo インストールするもの 
 import zipfile
 import logging
 import datetime
