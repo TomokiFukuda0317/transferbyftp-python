@@ -1,0 +1,11 @@
+argh==0.26.2
+bcrypt==3.1.7
+cffi==1.13.2
+cryptography==2.8
+paramiko==2.7.1
+pathtools==0.1.2
+pycparser==2.19
+PyNaCl==1.3.0
+PyYAML==5.3
+six==1.13.0
+watchdog==0.9.0
