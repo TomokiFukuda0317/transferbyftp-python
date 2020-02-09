@@ -6,8 +6,7 @@
 またクライアント側で、ファイル転送をトリガーに処理実行を行うプログラム：dirwatch.py
 
 ## Requirements
-pip install paramiko
-pip install sftp
+pip install -r requirements.txt
 
 ## System
 Python: 3.7.4
@@ -23,6 +22,7 @@ python ：file_transfer_tkinter.py -remote_path ${転送先のパス} -u ${ホ�
 ```
 （"-local_path  ${対象のcsvファイルのパス}"はプログラム実行時に出てくるGUIよりファイルを選択。それ以外のパラメータは任意のdefault値をソース内に設定できる。（76-80行目）
 
+*パスの指定は絶対パスで記述。
 ## License
 
 MIT
