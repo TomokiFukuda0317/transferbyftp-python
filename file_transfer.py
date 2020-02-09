@@ -1,5 +1,5 @@
 import argparse
-import paramiko #sftp をpip list に出す　danjo インストールするもの 
+import paramiko 
 import zipfile
 import logging
 import datetime
@@ -75,11 +75,11 @@ def file_transfer(argparse_args:"ArgumentParser オブジェクト") ->"実行�
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-local_path', default=None)
-    parser.add_argument('-remote_path', default="/home/ubuntu/files/archive")
+    parser.add_argument('-remote_path', default="/home/ubuntu/")
     parser.add_argument('-u', default='ubuntu')
-    parser.add_argument('-I', default='153.126.154.31')
+    parser.add_argument('-I', default='')
     parser.add_argument('-P', default=22)
-    parser.add_argument('-i', default='/Users/tomoki/.ssh/id_rsa_ftp')
+    parser.add_argument('-i', default='')
     argparse_args = parser.parse_args()
     #ファイル転送
     file_transfer(argparse_args)

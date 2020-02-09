@@ -73,9 +73,9 @@ def tkinter_start(parser):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(conflict_handler='resolve')
-    parser.add_argument('-remote_path', default="/home/ubuntu/files/archive")
+    parser.add_argument('-remote_path', default="/home/ubuntu/")
     parser.add_argument('-u', default='ubuntu')
-    parser.add_argument('-I', default='153.126.154.31')
+    parser.add_argument('-I', default='')
     parser.add_argument('-P', default=22)
-    parser.add_argument('-i', default='/Users/tomoki/.ssh/id_rsa_ftp')
+    parser.add_argument('-i', default='')
     tkinter_start(parser)
